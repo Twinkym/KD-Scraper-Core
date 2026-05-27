@@ -1,0 +1,35 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+        - main
+        - develop
+
+  pull_request:
+    branches:
+        - main
+        - develop
+
+jobs:
+  project-validation:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v4
+
+        - name: Setup Python
+          uses: actions/setup-python@v5
+          with:
+            python-version: "3.12"
+
+        - name: Verify Python installation
+          run: python --version
+
+        - name: Validate repository structure
+          run: |
+            test -f README.md
+            test -d docs
+            test -d src
+            test -d tests
