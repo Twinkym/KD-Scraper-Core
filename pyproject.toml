@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kd-scraper-core"
+version = "0.1.0"
+description = "Enterprese-grade modular scraping and automation framework."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [ 
+    { name = "KD-Tech Universe" }
+]
+
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest"
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
