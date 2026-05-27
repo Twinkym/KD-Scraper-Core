@@ -9,11 +9,13 @@ description = "Enterprese-grade modular scraping and automation framework."
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
-authors = [ 
+authors = [
     { name = "KD-Tech Universe" }
 ]
 
-dependencies = []
+dependencies = [
+  "httpx"
+]
 
 [project.optional-dependencies]
 dev = [
